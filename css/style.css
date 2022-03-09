@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 140px;  /* para que la navegacion en la misma web se posicione bien y el menu no tape parte de la web*/
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #ffffff;
+}
+
+/* HEADER */
+header {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    /* height: 750px; */
+}
+
+header video {
+    position: absolute;
+    min-width: 100%;    
+    min-height: 100%;
+    top: 0;
+    left: 0;
+}
+
+header div.capa-video {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    /* background-color: rgb(255, 255, 255, 0.50); */
+}
+
+div.capa-video h1, div.capa-video h2, div.capa-video p {
+    color: #ffffff;
+    /* color: #164a84; */
+    margin: 10px;
+}
+
+div.capa-video h1 {
+    font-size: 4rem;
+}
+
+div.capa-video h2 {
+    font-size: 2rem;
+}
+
+div.capa-video p {
+    font-size: 2rem;
+}
+
+/* NAV */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    /* border-bottom: 2px solid #164a84; */
+}
+
+/*      banner       */
+nav div.banner {
+    background-color: #da291c;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.banner p {
+    text-align: center;
+    color: #ffffff;
+}
+
+/*      menu         */
+nav div.enlaces {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(255, 255, 255, 0);
+    transition: 0.5s;
+}
+
+div.enlaces img {
+    height: 100px;
+    filter: brightness(10000%);
+}
+
+div.enlaces a {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+div.enlaces a:nth-child(1) {
+    align-self: flex-start;
+}
+
+div.enlaces a:link, div.enlaces a:visited, div.enlaces a:hover, div.enlaces a:active {
+    color: #ffffff;
+}
+
+/* MAIN */
+hr {
+    width: 75%;
+    height: 5px;
+    background-color: #164a84;
+    border-radius: 50%;
+    margin: 50px auto;
+}
+
+/*      nosotros         */
+section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+section h2 {
+    text-transform: uppercase;
+}
+
+section h2, section h3, section p, section ul {
+    padding: 10px;
+    color: #164a84;
+}
+
+section p {
+    align-self: flex-start;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+section ul {
+    list-style: circle inside;
+}
+
+/*      parallax         */
+main div.parallax {
+    background-image: url("../img/plumbing.jpg");
+    min-height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 50px 0;
+}
+
+/*      formulario       */
+form {
+    margin: 50px auto;
+}
+
+form div {
+    width: 100%;
+    position: relative;
+}
+
+div label {
+    color:#164a84; 
+    font-size: 1rem;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s;
+}
+
+input[type=text]:focus ~ label, input[type=text]:valid ~ label, input[type=email]:focus ~ label, input[type=email]:valid ~ label, textarea:focus ~ label, textarea:valid ~ label {
+    top:-5px;
+    font-size: 0.75rem;
+}
+
+input[type=text], input[type=email] {
+    width: 100%;
+    padding: 5px 20px;
+    margin: 15px 0;
+    border: none;
+    border-bottom: 2px solid #da291c;
+}
+
+input[type=text]:hover, input[type=email]:hover {
+    border: none;
+    border-bottom: 2px solid #164a84;
+}
+
+input[type=text]:focus, input[type=email]:focus {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #164a84;
+}
+
+input[type=text]:valid, input[type=email]:valid {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #008000;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #164a84;
+    color: #ffffff;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(22, 74, 132, 0.75);
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-color: #da291c;
+}
+
+textarea:focus, textarea:hover {
+    outline: none;
+    border-color: #164a84;
+}
+
+textarea:valid {
+    outline: none;
+    border-color: #008000;
+}
+
+form a:link, form a:visited, form a:hover, form a:active {
+    color: #164a84;
+}
+
+/* FOOTER */
+footer {
+	/* text-align:center; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+	background-color: rgb(22, 74, 132, 0);
+	color: #ffffff;
+	padding: 0 10px;
+    transition: 0.5s;
+}
+
+footer a {
+	text-decoration: none;
+}
+
+footer span {
+	font-size: 2.5rem;
+    margin: 15px;
+	color:#ffffff;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 10px;
+}
+
+footer i:hover {
+    transform: scale(1.5);
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 900px) {
+    body {
+        font-size: 14px;
+    }
+
+    div.capa-video h1 {
+        font-size: 56px;
+    }
+    
+    div.capa-video h2 {
+        font-size: 28px;
+    }
+    
+    div.capa-video p {
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        font-size: 12px;
+    }
+
+    div.capa-video h1 {
+        font-size: 48px;
+    }
+    
+    div.capa-video h2 {
+        font-size: 24px;
+    }
+    
+    div.capa-video p {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 10px;
+    }    
+
+    div.capa-video h1 {
+        font-size: 40px;
+    }
+    
+    div.capa-video h2 {
+        font-size: 20px;
+    }
+    
+    div.capa-video p {
+        font-size: 20px;
+    }
+}
